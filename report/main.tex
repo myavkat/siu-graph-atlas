@@ -1,0 +1,44 @@
+% SIU Graph Atlas - report
+% Build: latexmk -pdf main.tex
+\documentclass[journal]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{assets/}}
+
+\begin{document}
+
+\title{Structural Analysis of SIU Paper Networks, 2020-2026}
+
+\author{Mehmet~Yavuz~Katrancı and Şamil~Bilal~Özaydın}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+complex networks, keyword overlap, semantic similarity, community detection, OpenAlex
+\end{IEEEkeywords}
+
+\input{sections/introduction}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% The dataset source stays in the reference list while the sections are empty.
+% Remove \nocite once the text cites OpenAlex where the data is used.
+\nocite{priem2022openalex}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
